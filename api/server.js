@@ -55,7 +55,7 @@ server.delete('/api/users/:id', (req, res) => {
                 res.status(200).json(deletedUser)
             }
         })
-        .catch(err => {
+        .catch(() => {
             res.status(500).json({ message: "The user could not be removed" })
         })
 })
